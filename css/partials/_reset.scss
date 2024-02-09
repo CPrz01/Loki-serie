@@ -1,0 +1,26 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+@font-face {
+    font-family: "gothicpunk";
+    src: url(../../fonts/Gothic\ Punk.ttf);
+
+    @font-face {
+    font-family: "momcake";
+    src: url(../../fonts/Momcake-Bold.otf);
+    }
+
+    @font-face {
+        font-family: "alegreya";
+        src: url(../../fonts/AlegreyaSC-ExtraBoldItalic.ttf);
+    }
+
+    @font-face {
+        font-family: "raleway";
+        src: url(../../fonts/Raleway-Regular.ttf);
+    }
+}
+

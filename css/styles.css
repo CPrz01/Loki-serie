@@ -1,0 +1,428 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+@font-face {
+  font-family: "gothicpunk";
+  src: url(../fonts/Gothic\ Punk.ttf);
+}
+@font-face {
+  font-family: "momcake";
+  src: url(../fonts/Momcake-Bold.otf);
+}
+@font-face {
+  font-family: "alegreya";
+  src: url(../fonts/AlegreyaSC-ExtraBoldItalic.ttf);
+}
+@font-face {
+  font-family: "raleway";
+  src: url(../fonts/Raleway-Regular.ttf);
+}
+
+header {
+  height: 100px;
+  padding: 0 50px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding: 1rem;
+  background-color: #ffffff31;
+}
+header img {
+  width: 40px;
+}
+.logo {
+  font-family: "gothicpunk";
+  color: #000000;
+  font-weight: 200;
+  font-size: 75px;
+}
+.menu a {
+  color: #000000;
+  font-family: "momcake";
+  font-size: 25px;
+  text-decoration: none;
+  padding: 0 10px;
+  transition: 0.4s;
+}
+.abrir-menu,
+.cerrar-menu {
+  font-size: 30px;
+  cursor: pointer;
+  display: none;
+  transition: 0.4s;
+}
+.abrir-menu {
+  order: 1;
+}
+.menu a:hover,
+.abrir-menu:hover,
+.cerrar-menu:hover {
+  color: #bfeead;
+}
+#check {
+  display: none;
+}
+
+main {
+  background-image: url(../img/fondo.jpeg);
+  background-position: center;
+  background-size: cover;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 1rem;
+}
+.banner {
+  padding: 20px;
+  height: 20vh;
+  animation-name: slide;
+  animation-duration: 1s;
+  animation-delay: 0s;
+  animation-timing-function: ease-in;
+  animation-iteration-count: 1;
+  animation-direction: normal;
+  animation-fill-mode: none;
+  background-color: rgba(255, 255, 255, 0.6862745098);
+  border: 1px solid #191919;
+}
+.banner::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 10vh;
+  left: 0;
+}
+.contenido-banner {
+  position: relative;
+  color: #000000;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.contenido-banner h3 {
+  font-size: 40px;
+  padding: 10px 0px;
+  font-family: "alegreya";
+}
+.contenido-banner p {
+  font-size: 20px;
+  font-family: "raleway";
+  padding: 10px 0px;
+}
+@keyframes slide {
+  from {
+    transform: translateX(-300px);
+  }
+  to {
+    transform: translateX(0);
+  }
+}
+
+.contenedor {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  padding: 1rem;
+  margin: 1rem;
+  border: 1.5px solid #191919;
+  background-color: rgba(255, 255, 255, 0.7529411765);
+  border-radius: 50px;
+}
+.contenedor p {
+  font-family: "raleway";
+  color: #191919;
+  font-size: 16px;
+  line-height: 1.5;
+  font-weight: 500;
+}
+.contenedor p::-moz-selection {
+  color: #7cc253;
+}
+.contenedor p::selection {
+  color: #7cc253;
+}
+.contenedor h2 {
+  color: #191919;
+  font-family: "momcake";
+  font-size: 35px;
+  text-decoration: overline;
+}
+.imgs {
+  width: 700px;
+}
+.titulo-historia {
+  font-family: "alegreya";
+  text-transform: uppercase;
+  font-size: 50px;
+  color: #191919;
+}
+
+.section-tva {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: start;
+  padding: 20px;
+  border: 1px solid #191919;
+  background-color: rgba(255, 255, 255, 0.6862745098);
+  margin: 1rem;
+  border-radius: 20px;
+}
+.titulo-tva {
+  font-family: "alegreya";
+  text-transform: uppercase;
+  color: #191919;
+  font-size: 50px;
+  text-align: center;
+}
+.section-tva h2 {
+  text-decoration: overline;
+  padding: 8px;
+  color: #191919;
+  font-family: "momcake";
+  font-size: 35px;
+  text-transform: uppercase;
+}
+.section-tva p {
+  padding: 6px;
+  font-family: "raleway";
+  color: #191919;
+  font-size: 16px;
+  line-height: 1.5;
+  font-weight: 500;
+}
+
+.personajes-titulo {
+  font-family: "alegreya";
+  text-transform: uppercase;
+  color: #191919;
+  font-size: 50px;
+  text-align: center;
+}
+
+.section-personajes {
+  background-image: url(../img/fondo-personajes.jpg);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  display: flex;
+  width: 100%;
+  flex-wrap: wrap;
+  justify-content: center;
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
+}
+.card {
+  margin: 2.5%;
+  padding: 2.5%;
+  color: #272727;
+  border-radius: 10px 60px 30px;
+  background-color: #ededed;
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  width: 20em;
+  box-shadow: -15px 15px 10px rgba(78, 78, 78, 0.5019607843), 0 1px 2px rgba(146, 146, 146, 0.2392156863);
+  transition: all 0.5s cubic-bezier(0.25, 0.8, 0.25, 1);
+  gap: 1rem;
+  padding-inline: 1rem;
+}
+.card h2 {
+  font-family: "momcake";
+  font-size: 35px;
+  text-decoration: overline;
+}
+.card img {
+  width: 100%;
+  overflow: hidden;
+  border-radius: 10px;
+}
+.card p {
+  font-family: "raleway";
+  font-size: 16px;
+  line-height: 1.5;
+  font-weight: 500;
+}
+.card:hover {
+  box-shadow: -15px 15px 28px #f1f1f1, 0 10px 10px #ffffff;
+  transform: translateY(-25px);
+}
+
+.grilla {
+  height: 100vh;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: 1fr 1fr;
+  grid-template-areas: "a a b c" "a a d e";
+  justify-items: stretch;
+  align-items: stretch;
+}
+.grilla-hijo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.a {
+  background-image: url(../img/1.jpg);
+  background-size: cover;
+  background-position: center;
+  grid-area: a;
+}
+.b {
+  background-image: url(../img/2.jpg);
+  background-size: cover;
+  background-position: center;
+  grid-area: b;
+}
+.c {
+  background-image: url(../img/3.jpg);
+  background-size: cover;
+  background-position: center;
+  grid-area: c;
+}
+.d {
+  background-image: url(../img/4.jpg);
+  background-size: cover;
+  background-position: center;
+  grid-area: d;
+}
+.e {
+  background-image: url(../img/5.jpg);
+  background-size: cover;
+  background-position: center;
+  grid-area: e;
+}
+@media (max-width: 1000px) {
+  .grilla {
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    grid-template-areas: "a a" "b c" "d e";
+  }
+}
+@media (max-width: 1000px) and (max-width: 500px) {
+  .grilla {
+    grid-template-columns: 1fr;
+    grid-template-rows: 1.5fr repeat(4, 1fr);
+    grid-template-areas: "a" "b" "c" "d" "e";
+  }
+}
+
+@media (max-width: 760px) {
+  /**** historia ****/
+  .imgs {
+    width: 550px;
+  }
+  .titulo-historia {
+    font-size: 40px;
+  }
+  .contenedor p {
+    font-size: 13px;
+  }
+  .contenedor h2 {
+    font-size: 30px;
+  }
+}
+@media (max-width: 768px) {
+  /***** header ******/
+  .abrir-menu,
+  .cerrar-menu {
+    display: block;
+  }
+  .menu {
+    position: fixed;
+    width: 100%;
+    height: 100vh;
+    background-color: #86b858;
+    right: -100%;
+    top: 0;
+    text-align: center;
+    padding: 100px 0px;
+    z-index: 100;
+    transition: 0.8s;
+  }
+  .menu a {
+    display: block;
+    padding: 20px;
+  }
+  .cerrar-menu {
+    position: absolute;
+    top: 40px;
+    right: 40px;
+  }
+  #check:checked ~ .menu {
+    right: 0;
+  }
+  /****** main ******/
+  main {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 1rem;
+  }
+  .contenido-banner h3 {
+    font-size: 30px;
+  }
+  .contenido-banner p {
+    font-size: 16px;
+  }
+  /******** tva *********/
+  .section-tva {
+    flex-direction: column;
+  }
+}
+@media (max-width: 620px) {
+  /**** historia *****/
+  .imgs {
+    width: 400px;
+  }
+}
+@media (max-width: 553px) {
+  /******** banner *********/
+  .banner {
+    padding: 20px;
+    height: 30vh;
+    animation-name: alargar;
+    animation-duration: 3s;
+    animation-delay: 0s;
+    animation-timing-function: ease-in-out;
+    animation-direction: normal;
+    background-color: rgba(255, 255, 255, 0.6862745098);
+    border: 1px solid #191919;
+  }
+  @keyframes slide {
+    from {
+      transform: translateX(-300px);
+    }
+    to {
+      transform: translateX(0);
+    }
+  }
+  .contenido-banner h3 {
+    font-size: 28px;
+    padding: 5px 0px;
+    font-family: "alegreya";
+  }
+  .contenido-banner p {
+    font-size: 15px;
+    font-family: "raleway";
+    padding: 5px 0px;
+  }
+}
+@media (max-width: 474px) {
+  /**** historia ****/
+  .imgs {
+    width: 300px;
+  }
+  .titulo-historia {
+    font-size: 35px;
+  }
+}/*# sourceMappingURL=styles.css.map */

@@ -1,0 +1,60 @@
+.personajes-titulo{
+    font-family: 'alegreya';
+    text-transform: uppercase;
+    color: $colorPrincipal;
+    font-size: 50px;
+    text-align: center;
+}
+
+.section-personajes{
+  background-image: url(../img/fondo-personajes.jpg);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  display: flex;
+  width: 100%;
+  flex-wrap: wrap;
+  justify-content:center;
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
+
+  .card {
+    margin: 2.5%;
+    padding: 2.5%;
+    color: #272727;
+    border-radius: 10px 60px 30px;
+    background-color: #ededed;
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    width:20em;
+    box-shadow: -15px 15px 10px #4e4e4e80, 0 1px 2px #9292923d;
+    transition: all 0.5s cubic-bezier(.25,.8,.25,1);
+    gap: 1rem;
+    padding-inline: 1rem;
+
+    .card h2{
+        font-family: 'momcake';
+        font-size: 35px;
+        text-decoration: overline;
+    }
+
+    .card img{
+        width: 100%;
+        overflow: hidden;
+        border-radius: 10px;
+    }
+
+    .card p{
+        font-family: 'raleway';
+        font-size: 16px;
+        line-height: 1.50;
+        font-weight: 500;
+    }
+
+    .card:hover {
+        box-shadow: -15px 15px 28px #f1f1f1, 0 10px 10px #ffffff;
+        transform: translateY(-25px);;
+    }
+    }
+}

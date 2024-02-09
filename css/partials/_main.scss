@@ -1,0 +1,63 @@
+main{
+    background-image: url(../img/fondo.jpeg);
+    background-position: center;
+    background-size: cover;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 1rem;
+
+    .banner{
+    padding: 20px;
+    height: 20vh;
+    animation-name: slide;
+    animation-duration: 1s;
+    animation-delay: 0s;
+    animation-timing-function: ease-in;
+    animation-iteration-count: 1;
+    animation-direction: normal;
+    animation-fill-mode: none;
+    background-color: #ffffffaf;
+    border: 1px solid $colorPrincipal;
+    }
+
+    .banner::before{
+        content: '';
+        position: absolute;
+        width: 100%;
+        height: 10vh;
+        left: 0;
+    }
+
+    .contenido-banner{
+        position: relative;
+        color: #000000;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .contenido-banner h3{
+        font-size: 40px;
+        padding: 10px 0px;
+        font-family: 'alegreya';
+    }
+
+    .contenido-banner p{
+        font-size: 20px;
+        font-family: 'raleway';
+        padding: 10px 0px;
+    }
+
+    @keyframes slide{
+        from{
+            transform: translateX(-300px);
+        }
+        to{
+            transform: translateX(0);
+        }
+    }
+}
